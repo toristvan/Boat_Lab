@@ -1,0 +1,7 @@
+%Task 5.3 c
+sim('p5p3c.mdl')
+%From task 1
+K=0.1561;
+T=72.4347;
+
+

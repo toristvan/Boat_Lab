@@ -30,11 +30,6 @@ E= [0 0;
     0 0;
     0 0;
     0 1];
-%Discretize continous model using exact discretization
+%Discretize continous model using exact discre
 %Sample frequency of 10Hz-> sample time of 0.1s
-T_s=0.1;
-[A_d, B_d]=c2d(A,B,T_s);
-[A_d, E_d]=c2d(A,E,T_s);
-C_d=C;
-
 
