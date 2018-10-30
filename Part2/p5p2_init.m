@@ -37,6 +37,7 @@ end
 omega_0 = omega(index_1);
 %}
 [max_pxx, index_max_pxx]=max(pxx);
+omega_0=omega(index_max_pxx);
 %max_1=max_pxx;
 %index_1=index_max_pxx;
 %Analytical PSD

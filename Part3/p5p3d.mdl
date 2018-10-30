@@ -1,12 +1,12 @@
 Model {
-  Name			  "p5p3b"
+  Name			  "p5p3d"
   Version		  8.9
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.42"
+    ComputedModelVersion    "1.43"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "tikjetsa"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Oct 30 13:38:33 2018"
-  RTWModifiedTimeStamp	  462807510
-  ModelVersionFormat	  "1.%<AutoIncrement:42>"
+  LastModifiedDate	  "Tue Oct 30 13:48:31 2018"
+  RTWModifiedTimeStamp	  462808108
+  ModelVersionFormat	  "1.%<AutoIncrement:43>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -157,11 +157,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "p5p3b"
+    model_		    "p5p3d"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "p5p3b"
+      Cell		      "p5p3d"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1132,7 +1132,7 @@ Model {
     }
   }
   System {
-    Name		    "p5p3b"
+    Name		    "p5p3d"
     Location		    [27, 52, 974, 878]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1189,7 +1189,7 @@ Model {
 	    Type		    "checkbox"
 	    Name		    "logic"
 	    Prompt		    "waves"
-	    Value		    "off"
+	    Value		    "on"
 	  }
 	  PropName		  "Parameters"
 	}
