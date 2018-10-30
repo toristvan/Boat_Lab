@@ -25,6 +25,7 @@ ylabel('${S_\phi}_\omega [rad]$', 'Interpreter', 'latex');
 hold off
 
 %Calculating omega_0
+%{
 max_1 = pxx(1);
 index_1 = 1;
 for i = 2:length(pxx)
@@ -34,7 +35,10 @@ for i = 2:length(pxx)
     end
 end
 omega_0 = omega(index_1);
-
+%}
+[max_pxx, index_max_pxx]=max(pxx);
+%max_1=max_pxx;
+%index_1=index_max_pxx;
 %Analytical PSD
 
 
@@ -45,11 +49,12 @@ for i = 1:length(omega)
 end
 %}
 
-P_1 = make_analytical(0.05, omega, omega_0, max_1);
-P_2 = make_analytical(0.09, omega, omega_0, max_1);
-P_3 = make_analytical(0.1, omega, omega_0, max_1);
-P_4 = make_analytical(0.2, omega, omega_0, max_1);
-P_5 = make_analytical(0.3, omega, omega_0, max_1);
+
+P_1 = make_analytical(0.05, omega, omega_0, max_pxx);
+P_2 = make_analytical(0.09, omega, omega_0, max_pxx);
+P_3 = make_analytical(0.1, omega, omega_0, max_pxx);
+P_4 = make_analytical(0.2, omega, omega_0, max_pxx);
+P_5 = make_analytical(0.3, omega, omega_0, max_pxx);
 
 figure;
 hold on
