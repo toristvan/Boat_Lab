@@ -69,3 +69,6 @@ xlabel('$\omega [rad/s]$', 'Interpreter', 'latex');
 ylabel('${S_\phi}_\omega [rad]$', 'Interpreter', 'latex');
 legend({'Estimated','$\lambda =0.05$','$\lambda =0.09$','$\lambda =0.1$','$\lambda =0.2$','$\lambda =0.3$'}, 'Interpreter', 'latex')
 hold off 
+
+
+%% implement curvefitlambda_try=lsqcurvefit
