@@ -12,5 +12,11 @@ T=72.4347;
 Q=[30 0;
     0 10^-6];
 %P_0^- - initial a priori estimate error covariance
+P_0=[1 0 0 0 0;
+    0 0.013 0 0 0;
+    0 0 pi^2 0 0;
+    0 0 0 1 0;
+    0 0 0 0 2.5*10^-3];
 %^x_0^- - initial a priori state estimate
+x_0=[0;0;0;0;0];
 
