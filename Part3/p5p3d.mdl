@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.43"
+    ComputedModelVersion    "1.46"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -101,11 +101,11 @@ Model {
   Creator		  "markh"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "tikjetsa"
+  LastModifiedBy	  "erlended"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Oct 30 13:48:31 2018"
-  RTWModifiedTimeStamp	  462808108
-  ModelVersionFormat	  "1.%<AutoIncrement:43>"
+  LastModifiedDate	  "Tue Nov 13 17:33:54 2018"
+  RTWModifiedTimeStamp	  464031232
+  ModelVersionFormat	  "1.%<AutoIncrement:46>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1018,6 +1018,15 @@ Model {
       ContinuousStateAttributes	"''"
     }
     Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
       BlockType		      Outport
       Port		      "1"
       OutMin		      "[]"
@@ -1148,7 +1157,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "45"
+    SIDHighWatermark	    "47"
     Block {
       BlockType		      SubSystem
       Name		      "Cargo ship"
@@ -1712,7 +1721,7 @@ Model {
       SaveFormat	      "Structure With Time"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
-      SampleTime	      "-1"
+      SampleTime	      "0.1"
     }
     Block {
       BlockType		      TransferFcn
@@ -1754,7 +1763,7 @@ Model {
       SaveFormat	      "Structure With Time"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
-      SampleTime	      "-1"
+      SampleTime	      "0.1"
     }
     Block {
       BlockType		      Saturate
@@ -1829,6 +1838,15 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
+      BlockType		      Memory
+      Name		      "memory_compass"
+      SID		      "47"
+      Position		      [170, 260, 200, 290]
+      ZOrder		      30
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+    }
+    Block {
       BlockType		      Gain
       Name		      "rad to deg"
       SID		      "40"
@@ -1875,33 +1893,6 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      29
-      SrcBlock		      "Cargo ship"
-      SrcPort		      1
-      Points		      [9, 0; 0, 1]
-      Branch {
-	ZOrder			32
-	Points			[46, 0; 0, -61]
-	Branch {
-	  ZOrder		  38
-	  Points		  [0, -75]
-	  DstBlock		  "Compass output with PD"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  35
-	  DstBlock		  "Scope"
-	  DstPort		  1
-	}
-      }
-      Branch {
-	ZOrder			31
-	Points			[0, 83; -579, 0]
-	DstBlock		"Sum"
-	DstPort			2
-      }
-    }
-    Line {
       ZOrder		      28
       SrcBlock		      "Sum"
       SrcPort		      1
@@ -1931,6 +1922,41 @@ Model {
 	DstBlock		"Cargo ship"
 	DstPort			1
       }
+    }
+    Line {
+      ZOrder		      29
+      SrcBlock		      "Cargo ship"
+      SrcPort		      1
+      Points		      [9, 0; 0, 1]
+      Branch {
+	ZOrder			47
+	Points			[0, 84]
+	DstBlock		"memory_compass"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			32
+	Points			[46, 0; 0, -61]
+	Branch {
+	  ZOrder		  38
+	  Points		  [0, -75]
+	  DstBlock		  "Compass output with PD"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  35
+	  DstBlock		  "Scope"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      ZOrder		      51
+      SrcBlock		      "memory_compass"
+      SrcPort		      1
+      Points		      [-305, 0]
+      DstBlock		      "Sum"
+      DstPort		      2
     }
   }
 }

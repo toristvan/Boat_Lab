@@ -1,5 +1,5 @@
 %Task 5.3 c
-sim('p5p3d.mdl')
+
 %From task 1
 K=0.1561;
 T=72.4347;
@@ -17,7 +17,8 @@ psi_ref=30; %degrees
 PM=50; %degrees
 omega_c=0.10; %rad/s cross frequency;
 
-
+sim('p5p3d.mdl')
+%change sample values for to ws
 t=compass_pd.time(1:1000);
 psi_m=compass_pd.signals.values(1:1000);
 delta_m=rudder_pd.signals.values(1:1000);
