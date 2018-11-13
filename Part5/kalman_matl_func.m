@@ -15,7 +15,7 @@ x_post=x_pri+L_k*(y-C_k*x_pri);
 P_post = (I_k - L_k*C_k)*P_pri*(I_k - L_k*C_k)'+L_k*R_k*L_k';
 
 % 4 - Projet ahead
-x_pri = A_k*x_pri + B_k*u;
+x_pri = A_k*x_post + B_k*u;
 P_pri = A_k*P_post*A_k' + E_k*Q_k*E_k';
 
 % Output
