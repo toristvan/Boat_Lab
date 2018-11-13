@@ -1,6 +1,6 @@
 %Task 5.5 c
 %Initialize 5.5 a and b first
-%sim('p5p3c.mdl')
+%sim('p5p5c.slx')
 %Declaring variables
 K=0.1561;
 T=72.4347;
@@ -31,3 +31,5 @@ x=[epsilon(integral of psi_w);
 %}
 R_rad_d=R_rad/T_s; %0.0016(262)
 
+data = struct('A_d',A_d,'B_d',B_d,'C_d',C_d,'E_d', E_d, 'Q',Q,'R_rad_d', R_rad_d,'P_0',P_0,'x_0',x_0, 'I', eye(5));
+sim('p5p5c.slx')
