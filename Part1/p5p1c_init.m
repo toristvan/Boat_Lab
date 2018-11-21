@@ -7,29 +7,43 @@ sim_samples=10000;
 omega_1=0.005;
 omega_2=0.05;
 assignin('base','freq', omega_1)
-assignin('base','freq', omega_2)
-%sim('p5p1c.mdl')
+sim('p5p1c.mdl')
 
 %plotting figures and obtaining values
 %to workspace
-
+%omega 1
 figure;
 hold on
-title('Output with sine input with \omega_1 = 0.005 with waves and noise')
+title({'Output \psi with input \delta as a sine with \omega_1 = 0.005.';'Wave disturbance and measurement noise'});
 plot(ws_compass_noise_1.time,ws_compass_noise_1.signals.values);
-xlabel('$Time/s$', 'Interpreter', 'latex');
+xlabel('$Time [s]$', 'Interpreter', 'latex');
 ylabel('$\psi [deg]$', 'Interpreter', 'latex');
-legend({'\psi'});hold off
-
-figure;
-hold on
-title('Output with sine input with \omega_2 = 0.05  with waves and noise')
-plot(ws_compass_noise_2.time,ws_compass_noise_2.signals.values);
-xlabel('$Time/s$', 'Interpreter', 'latex');
-ylabel('$\psi [deg]$', 'Interpreter', 'latex');
-legend({'\psi'});
+%legend({'\psi'});
 hold off
 
+%omega_2
+assignin('base','freq', omega_2)
+sim('p5p1c.mdl')
+
+figure;
+hold on
+title({'Output \psi with input \delta as a sine with \omega_1 = 0.005.';'Wave disturbance and measurement noise'});
+plot(ws_compass_noise_1.time,ws_compass_noise_1.signals.values);
+xlabel('$Time [s]$', 'Interpreter', 'latex');
+ylabel('$\psi [deg]$', 'Interpreter', 'latex');
+%legend({'\psi'});
+hold off
+
+%{
+figure;
+hold on
+title({'Output \psi with input \delta as a sine with \omega_2 = 0.05.';'Disturbances: waves and measurement noise'});
+plot(ws_compass_noise_2.time,ws_compass_noise_2.signals.values);
+xlabel('$Time [s]$', 'Interpreter', 'latex');
+ylabel('$\psi [deg]$', 'Interpreter', 'latex');
+%legend({'\psi'});
+hold off
+%}
 %to file
 %{
 figure;

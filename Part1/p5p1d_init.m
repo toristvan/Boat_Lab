@@ -8,8 +8,8 @@ sim('p5p1d.mdl')
 
 figure;
 hold on
-title({'Comparison between step response of the model';
-    'and the response of the ship'})
+title({'Comparison between step responses of the model and the ship'});
+%Disturbances here?
 plot(transf_compass_step.time,transf_compass_step.signals.values,'r');
 plot(ship_compass_step.time, ship_compass_step.signals.values,'b');
 xlabel('$Time [s]$', 'Interpreter', 'latex');
