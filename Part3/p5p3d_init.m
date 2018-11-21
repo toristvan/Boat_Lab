@@ -24,11 +24,10 @@ delta_m=rudder_pd.signals.values(1:1000);
 
 figure;
 hold on;
-title({'System with PD regulator with saturation for rudder';'with wave disturbance'});
+title({'System with PD regulator with saturation for rudder.';'Wave disturbance and measurement noise'});
 plot(t, psi_ref*ones(1000,1),'m');
 plot(t,psi_m,'b',t,delta_m,'r');
-xlabel('$Time/s$', 'Interpreter', 'latex');
+xlabel('$Time [s]$', 'Interpreter', 'latex');
 ylabel('$Angle [deg]$', 'Interpreter', 'latex');
-legend({'Compass reference','Compass measured','Rudder'});
+legend({'\psi_r','\psi','\delta'});
 hold off;
-

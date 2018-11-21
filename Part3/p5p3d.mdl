@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.43"
+    ComputedModelVersion    "1.44"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "tikjetsa"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Oct 30 13:48:31 2018"
-  RTWModifiedTimeStamp	  462808108
-  ModelVersionFormat	  "1.%<AutoIncrement:43>"
+  LastModifiedDate	  "Wed Nov 21 12:49:44 2018"
+  RTWModifiedTimeStamp	  464705381
+  ModelVersionFormat	  "1.%<AutoIncrement:44>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1764,8 +1764,8 @@ Model {
       Position		      [235, 195, 265, 225]
       ZOrder		      10
       InputPortMap	      "u0"
-      UpperLimit	      "35"
-      LowerLimit	      "-35"
+      UpperLimit	      "45"
+      LowerLimit	      "-45"
     }
     Block {
       BlockType		      Scope

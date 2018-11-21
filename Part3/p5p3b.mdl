@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.42"
+    ComputedModelVersion    "1.45"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "tikjetsa"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Oct 30 13:38:33 2018"
-  RTWModifiedTimeStamp	  462807510
-  ModelVersionFormat	  "1.%<AutoIncrement:42>"
+  LastModifiedDate	  "Wed Nov 21 12:45:35 2018"
+  RTWModifiedTimeStamp	  464705129
+  ModelVersionFormat	  "1.%<AutoIncrement:45>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1762,10 +1762,10 @@ Model {
       SID		      "45"
       Ports		      [1, 1]
       Position		      [235, 195, 265, 225]
-      ZOrder		      10
+      ZOrder		      11
       InputPortMap	      "u0"
-      UpperLimit	      "35"
-      LowerLimit	      "-35"
+      UpperLimit	      "45"
+      LowerLimit	      "-45"
     }
     Block {
       BlockType		      Scope
@@ -1861,13 +1861,6 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      25
-      SrcBlock		      "rad to deg"
-      SrcPort		      1
-      DstBlock		      "Saturation"
-      DstPort		      1
-    }
-    Line {
       ZOrder		      26
       SrcBlock		      "deg to rad"
       SrcPort		      1
@@ -1916,7 +1909,14 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      39
+      ZOrder		      46
+      SrcBlock		      "rad to deg"
+      SrcPort		      1
+      DstBlock		      "Saturation"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      47
       SrcBlock		      "Saturation"
       SrcPort		      1
       Points		      [28, 0]
