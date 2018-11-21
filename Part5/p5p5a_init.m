@@ -36,17 +36,18 @@ E= [0 0;
 %Discretize continous model using exact discretization
 %Sample frequency of 10Hz-> sample time of 0.1s
 %Using matlab function c2d
-%{
+
 
 [A_d, B_d]=c2d(A,B,T_s);
 [A_d, E_d]=c2d(A,E,T_s);
 C_d=C;
-%}
+
 %Computing with theory
-A_d = expm(A.*T_s); % e^A
-syms x;
-f = expm(A.*x);
-B_d = vpaintegral(f,[0 T_s])*B;
-E_d = vpaintegral(f,[0 T_s])*E;
+%A_d = expm(A.*T_s); % e^A
+%syms x;
+%f = expm(A.*x);
+%B_d = vpaintegral(f,[0 T_s])*B;
+%E_d = vpaintegral(f,[0 T_s])*E;
+%C_d=C;
 
 

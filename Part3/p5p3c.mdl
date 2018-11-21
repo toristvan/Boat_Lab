@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.44"
+    ComputedModelVersion    "1.1"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -43,7 +43,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [27.0, 52.0, 947.0, 826.0]
+      Location		      [27.0, 52.0, 947.0, 722.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -67,9 +67,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[893.0, 645.0]
+	Extents			[893.0, 541.0]
 	ZoomFactor		[1.0]
-	Offset			[-154.86581093441868, -193.56666666666666]
+	Offset			[-261.41581192981624, -193.56666666666666]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -89,7 +89,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAAOjAAACvgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAAOjAAACVgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
       "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAMr/////wAAAAAAAAAA/"
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "tikjetsa"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 21 12:49:02 2018"
-  RTWModifiedTimeStamp	  464705339
-  ModelVersionFormat	  "1.%<AutoIncrement:44>"
+  LastModifiedDate	  "Wed Nov 21 13:36:46 2018"
+  RTWModifiedTimeStamp	  464708203
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1018,6 +1018,15 @@ Model {
       ContinuousStateAttributes	"''"
     }
     Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
       BlockType		      Outport
       Port		      "1"
       OutMin		      "[]"
@@ -1133,7 +1142,7 @@ Model {
   }
   System {
     Name		    "p5p3c"
-    Location		    [27, 52, 974, 878]
+    Location		    [27, 52, 974, 774]
     Open		    on
     PortBlocksUseCompactNotation off
     ModelBrowserVisibility  off
@@ -1148,7 +1157,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "45"
+    SIDHighWatermark	    "46"
     Block {
       BlockType		      SubSystem
       Name		      "Cargo ship"
@@ -1712,7 +1721,7 @@ Model {
       SaveFormat	      "Structure With Time"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
-      SampleTime	      "-1"
+      SampleTime	      "0.1"
     }
     Block {
       BlockType		      TransferFcn
@@ -1720,8 +1729,18 @@ Model {
       SID		      "38"
       Position		      [-20, 172, 120, 248]
       ZOrder		      3
+      BackgroundColor	      "green"
       Numerator		      "[K_pd*T_d K_pd]"
       Denominator	      "[T_f 1]"
+    }
+    Block {
+      BlockType		      Memory
+      Name		      "Memory"
+      SID		      "46"
+      Position		      [185, 260, 215, 290]
+      ZOrder		      11
+      BlockMirror	      on
+      NamePlacement	      "alternate"
     }
     Block {
       BlockType		      Reference
@@ -1747,14 +1766,14 @@ Model {
       Name		      "Rudder input with PD"
       SID		      "44"
       Ports		      [1]
-      Position		      [320, 40, 380, 70]
+      Position		      [340, 40, 400, 70]
       ZOrder		      9
       VariableName	      "rudder_pd"
       MaxDataPoints	      "inf"
       SaveFormat	      "Structure With Time"
       Save2DSignal	      "3-D array (concatenate along third dimension)"
       FixptAsFi		      on
-      SampleTime	      "-1"
+      SampleTime	      "0.1"
     }
     Block {
       BlockType		      Saturate
@@ -1764,8 +1783,8 @@ Model {
       Position		      [235, 195, 265, 225]
       ZOrder		      10
       InputPortMap	      "u0"
-      UpperLimit	      "45"
-      LowerLimit	      "-45"
+      UpperLimit	      "35"
+      LowerLimit	      "-35"
     }
     Block {
       BlockType		      Scope
@@ -1813,7 +1832,7 @@ Model {
       BlockType		      Constant
       Name		      "compass_ref"
       SID		      "41"
-      Position		      [-210, 195, -180, 225]
+      Position		      [-250, 195, -180, 225]
       ZOrder		      6
       Value		      "psi_ref"
     }
@@ -1896,9 +1915,9 @@ Model {
       }
       Branch {
 	ZOrder			31
-	Points			[0, 83; -579, 0]
-	DstBlock		"Sum"
-	DstPort			2
+	Points			[0, 84]
+	DstBlock		"Memory"
+	DstPort			1
       }
     }
     Line {
@@ -1931,6 +1950,14 @@ Model {
 	DstBlock		"Cargo ship"
 	DstPort			1
       }
+    }
+    Line {
+      ZOrder		      46
+      SrcBlock		      "Memory"
+      SrcPort		      1
+      Points		      [-320, 0]
+      DstBlock		      "Sum"
+      DstPort		      2
     }
   }
 }
