@@ -14,7 +14,6 @@ omega = (2*pi.*f).';
 pxx = (pxx./(2*pi)).';
 
 %Plotting the figure
-
 figure;
 hold on
 title('Estimated PSD')
@@ -25,32 +24,10 @@ ylabel('${S_\phi}_\omega [rad]$', 'Interpreter', 'latex');
 hold off
 
 %Calculating omega_0
-%{
-max_1 = pxx(1);
-index_1 = 1;
-for i = 2:length(pxx)
-    if pxx(i) > max_1
-        max_1 = pxx(i);
-        index_1 = i;
-    end
-end
-omega_0 = omega(index_1);
-%}
 [max_pxx, index_max_pxx]=max(pxx);
 omega_0=omega(index_max_pxx);
-%max_1=max_pxx;
-%index_1=index_max_pxx;
+
 %Analytical PSD
-
-
-%{
-for i = 1:length(omega)
-    x = omega(i);
-    P(i)= (x^2*4*lambda^2*omega_0^2*max_1)/(x^4+omega_0^4+2*omega_0^2*x^2*(2*lambda^2-1));
-end
-%}
-
-
 P_1 = make_analytical(0.05, omega, omega_0, max_pxx);
 P_2 = make_analytical(0.09, omega, omega_0, max_pxx);
 P_3 = make_analytical(0.1, omega, omega_0, max_pxx);
@@ -72,4 +49,3 @@ legend({'Estimated','$\lambda =0.05$','$\lambda =0.09$','$\lambda =0.1$','$\lamb
 hold off 
 
 
-%% implement curvefitlambda_try=lsqcurvefit
