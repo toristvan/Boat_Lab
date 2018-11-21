@@ -1,5 +1,4 @@
 %Task 5.5 a
-%sim('p5p3b.mdl')
 
 % Declaring variabes
 
@@ -10,7 +9,6 @@ T = 72.4347;
 sigma = sqrt(7.919*10^-4);
 K_w = 2*lambda*omega_0*sigma;
 I = eye(5); %identity matrix
-%t = 0.1;
 T_s=0.1;
 
 % Declaring matrix A, B, C amd E from 5.4 a)

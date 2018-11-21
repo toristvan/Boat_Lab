@@ -1,9 +1,22 @@
 %Task 5.5 c
 %Initialize 5.5 a and b first
 %sim('p5p5c.slx')
-%Declaring variables
-K=0.1561;
-T=72.4347;
+%Declaring variables given in a
+%K=0.1561;
+%T=72.4347;
+
+%Values for PD-regulator
+
+T_d=T; %to cancel time constant of transfer function
+%T_f=8.39130;
+T_f=-10/tan(130*pi/180); %8.3910
+%K_pd=0.8526;
+K_pd=sqrt((0.01*T_f)^2+0.01)/K; %0.8363
+
+%system constants
+psi_ref=30; %degrees
+PM=50; %degrees
+omega_c=0.10; %rad/s cross frequency;
 
 %Declaring matrices
 %w_b=current; measurement noise
