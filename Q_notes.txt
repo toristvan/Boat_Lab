@@ -1,0 +1,27 @@
+Q1 - 50*Q
+Q2 - [0 0 0 0]
+Q3 - [x 0.1825 0.1825 x] spikes
+Q4 - [x 0.18125 0.18125 x] no spikes
+Q5 - [x 0.5 0 x] slightly off
+Q6 - [x 0 0.5 x] nearer than ^
+Q7 - [x 0 0.7 x] off rudder, decent otherwise
+Q8 - [0 0 0 x] faster, similiar to 0000?
+Q9 - [x 0 0 0] pretty good, slightly off
+Q10 - [100*x 0 0 x] oscillating
+Q11 - [x 0 0 100*x] much better, still some oscillation
+Q12 - [x 0 0 10000*x] oscillating out of phase
+Q13 - 0.02*Q
+
+Q0,Q1,Q8:
+e, rud: Q8, Q2 very similar delta, faster than Q0. Estimates very similar for all
+e, com: Q0, Q8 very similar psi, Q2 relatively off. Estimate Q0, Q8 very similar, Q2 some off.
+d, rud: Same as e, rud
+d, com: same as e, com minus estimate part.
+
+
+Q0,Q1,Q9: 
+e, rud: Q0, Q9 very similar delta. Q2 faster. Estimates similar.
+e, com: Q2, Q9 very similar psi, both off from Q0.Estimate Q2, Q9 very similar, bot off from Q0.
+d, rud: same as e, rud
+d, com: same as e, com min estimate part. Not that much off either.
+
