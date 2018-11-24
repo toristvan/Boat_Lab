@@ -4,7 +4,9 @@ persistent init_flag A_k B_k C_k E_k I_k P_pri Q_k R_k x_pri;
 
 if isempty(init_flag)
     init_flag=1;
-    [A_k, B_k, C_k, E_k, I_k, P_pri, Q_k, R_k, x_pri] = deal(data.A_d,data.B_d,data.C_d, data.E_d, data.I, data.P_0, data.Q, data.R_rad_d, data.x_0);
+    [A_k, B_k, C_k, E_k, I_k, P_pri, Q_k, R_k, x_pri] = ...
+        deal(data.A_d,data.B_d,data.C_d, data.E_d, ...
+        data.I, data.P_0, data.Q, data.R_rad_d, data.x_0);
 end
 % 1:Compute Kalman Gain
 L_k=P_pri*C_k'*inv(C_k*P_pri*C_k' + R_k);

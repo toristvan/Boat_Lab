@@ -1,12 +1,12 @@
 Model {
-  Name			  "p5p1c"
+  Name			  "p5p1cx"
   Version		  8.9
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.39"
+    ComputedModelVersion    "1.40"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "tikjetsa"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Nov 21 12:38:37 2018"
-  RTWModifiedTimeStamp	  464704717
-  ModelVersionFormat	  "1.%<AutoIncrement:39>"
+  LastModifiedDate	  "Sat Nov 24 20:34:57 2018"
+  RTWModifiedTimeStamp	  464992495
+  ModelVersionFormat	  "1.%<AutoIncrement:40>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -157,11 +157,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "p5p1c"
+    model_		    "p5p1cx"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "p5p1c"
+      Cell		      "p5p1cx"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1145,7 +1145,7 @@ Model {
     }
   }
   System {
-    Name		    "p5p1c"
+    Name		    "p5p1cx"
     Location		    [-10, 15, 1019, 794]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1750,19 +1750,9 @@ Model {
       Name		      "Sine_1"
       SID		      "31"
       Ports		      [0, 1]
-      Position		      [125, 135, 155, 165]
+      Position		      [170, 195, 200, 225]
       ZOrder		      1
       Frequency		      "freq"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Sin
-      Name		      "Sine_2"
-      SID		      "32"
-      Ports		      [0, 1]
-      Position		      [125, 195, 155, 225]
-      ZOrder		      2
-      Frequency		      "0.05"
       SampleTime	      "0"
     }
     Block {
@@ -1815,7 +1805,6 @@ Model {
       ZOrder		      22
       SrcBlock		      "Sine_1"
       SrcPort		      1
-      Points		      [78, 0; 0, 60]
       DstBlock		      "Cargo ship"
       DstPort		      1
     }

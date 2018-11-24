@@ -1,7 +1,6 @@
 %Task 5.5 a
 
 % Declaring variabes
-
 omega_0 = 0.7823;
 lambda = 0.09;
 K = 0.1561;
@@ -12,7 +11,6 @@ I = eye(5); %identity matrix
 T_s=0.1;
 
 % Declaring matrix A, B, C amd E from 5.4 a)
-
 A = [0 1 0 0 0;
     -omega_0^2 -2*lambda*omega_0 0 0 0;
     0 0 0 1 0;
@@ -34,18 +32,18 @@ E= [0 0;
 %Discretize continous model using exact discretization
 %Sample frequency of 10Hz-> sample time of 0.1s
 %Using matlab function c2d
-
-
 [A_d, B_d]=c2d(A,B,T_s);
 [A_d, E_d]=c2d(A,E,T_s);
 C_d=C;
 
 %Computing with theory
-%A_d = expm(A.*T_s); % e^A
-%syms x;
-%f = expm(A.*x);
-%B_d = vpaintegral(f,[0 T_s])*B;
-%E_d = vpaintegral(f,[0 T_s])*E;
-%C_d=C;
+%{
+A_d = expm(A.*T_s); % e^A
+syms x;
+f = expm(A.*x);
+B_d = vpaintegral(f,[0 T_s])*B;
+E_d = vpaintegral(f,[0 T_s])*E;
+C_d=C;
+%}
 
 

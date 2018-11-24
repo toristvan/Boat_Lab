@@ -1,11 +1,8 @@
 % Task 5.2 a
-
 %Defining variables
 fs = 10;
 window = 4096;
 samples = 100;
-
-
 %Calculating PSD
 [pxx, f] = pwelch(psi_w(2,:).*(pi/180), window, [], [], fs);
 
